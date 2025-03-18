@@ -1,0 +1,223 @@
+:root {
+    --color-primary: rgb(12, 26, 95);
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Foto o logo de fondo */
+
+body {
+    
+    height: 100vh; /* Asegura que el body ocupe toda la pantalla */
+    background-image: url("assets/checobb_2.png"); /* Ruta de tu imagen */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed;
+
+}
+
+.main-content {
+    min-height: 170vh; /* Aumenta el espacio del contenido */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-family: 'Orbitron', sans-serif; /* Fuente estilo F1 */
+    font-size: 60px; /* Ajusta el tamaño según necesites */
+    font-weight: 700; /* Hace que el texto sea más grueso */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras para darle más estilo */
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+    transform: skewX(-10deg); /* Inclinación estilo F1 */
+} 
+
+.main-title:hover {
+    text-shadow: 5px 0px 10px rgba(255, 255, 255, 0.936);
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Subtitulo: Agrega el nombre de tus amigos */
+.section-title {
+    font-family: 'Orbitron', sans-serif; /* Misma fuente que el título */
+    font-size: 35px; /* Ajusta el tamaño según necesites */
+    font-weight: 600; /* Hace que el texto sea más grueso */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    color: rgb(255, 40, 0); /* Color rojo para mayor contraste */
+    text-shadow: 3px 3px 5px rgba(162, 79, 79, 0.5); /* Efecto de sombra */
+    transform: skewX(-10deg); /* Inclinación estilo F1 */
+    text-align: center;
+}
+
+.section-title:hover {
+    text-shadow: 5px 0px 10px rgba(255, 255, 255, 0.936);
+    transition: 0.3s ease-in-out;
+}
+
+
+
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.button-container {
+    width: 300px;
+    justify-content: center;
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Merriweather", serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de botón */
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #05DF05;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 18px;
+}
+
+.button-draw img {
+    margin-right: 40px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+
+.button-reset {
+    background-color: #ff4d4d; /* Rojo llamativo */
+    color: white;
+    font-size: 18px; /* Tamaño de letra */
+    padding: 14px 40px;
+    border: 2px solid black; /* Contorno negro */
+    width: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 15px; /* Espacio superior */
+    font-weight: normal; /* Asegura que la fuente se vea igual que el otro botón */
+    text-align: center;
+    
+}
+
+.button-reset:hover {
+    background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
+}
+
+#resultado {
+    
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    letter-spacing: 2px;
+    color: rgb(6, 17, 70); /* Cambia a tu color preferido */
+    text-shadow: 3px 3px 5px rgba(22, 15, 118, 0.5); /* Efecto de sombra */
+    transform: skewX(-10deg); /* Inclinación estilo F1 */
+}
